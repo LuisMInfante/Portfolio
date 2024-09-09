@@ -122,7 +122,7 @@
 
 <footer>
 	Created by <a class="me" href="/about">Luis Infante</a> ❤️ with
-	<span class="svelte">Svelte</span>
+	<a class="svelte" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">Svelte</a>
 </footer>
 
 <style>
