@@ -17,10 +17,14 @@
 						{project.title}
 					</h2>
 					<div class="techsContainer">
-						Technologies:
+						<!-- Technologies: -->
 						<div class="techs">
 							{#each project.technologies as tech}
-								<div>{tech}</div>
+							<img
+							src={tech.iconUrl ? tech.iconUrl : `https://skillicons.dev/icons?i=${tech.name}`}
+							class="techIcon"
+							alt={tech.name}
+						  />
 							{/each}
 						</div>
 					</div>
@@ -118,6 +122,14 @@
 	}
 	.techs > div {
 		margin: 0 0 0 10px;
+	}
+	.techIcon {
+		height: 36px;
+		margin-right: 10px;
+		border-radius: 8px;
+	}
+	.rounded {
+		border-radius: 8px;
 	}
 
 	.button {
