@@ -134,8 +134,10 @@
 			padding: 0;
 		}
 		.works > h1 {
-			font-size: 48px;
-			margin: 50px 0 0 0;
+			font-weight: 700;
+    		margin: 0 0 0 0;
+    		font-size: 36px;
+    		text-align: start;
 		}
 
 		.works {

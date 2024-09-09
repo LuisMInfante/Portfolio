@@ -8,22 +8,20 @@
 
 <div class="container">
 	<main>
-		<h1>About</h1>
-		<p>
-			Hey, I&apos;m Luis 👋  <br>
-			I&apos;m a software engineer and a Computer Science student at UCF, passionate about building games and cool software experiences.
-			Currently, I&apos;m involved in two research positions—one enhancing chip security at Silicon Assurance, and the other automating biological experiments with Argonne National Laboratory.
+		<p class="greeting">
+			Hey, I&apos;m Luis 👋  
 		</p>
-		<p>
+		<p class="description">
+			I&apos;m a software engineer and a Computer Science student at UCF, passionate about building games and cool software experiences. Currently, I&apos;m involved in two research positions—one enhancing chip security at Silicon Assurance, and the other automating biological experiments with Argonne National Laboratory.
+		</p>
+		<p class="description">
 			When I&apos;m not coding, you can find me playing games like Kingdom Hearts, playing board games with my friends, or hanging out with my fellow engineers at Knight Hacks.
 		</p>
 		<h2>Skills</h2>
 		{#each Object.entries(skills) as [section, technologies]}
 			<ul>
 				<li>
-					<h4>
-						{section}:
-					</h4>
+					<h4>{section}:</h4>
 					<div class="list">
 						{#each technologies as technology}
 							<!-- Handle Objects -->
@@ -44,6 +42,22 @@
 </div>
 
 <style>
+	.greeting {
+		font-size: 36px;  
+		font-weight: 700;
+		margin: 25px 0 25px 0;
+		text-align: start;
+		color: #fff;
+	}
+
+	.description {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.6;
+		color: #fff;
+		margin-bottom: 20px;
+	}
+
 	.skillWrapper {
 		display: flex;
 		align-items: center;
@@ -76,13 +90,6 @@
 		box-sizing: border-box;
 	}
 
-	h1 {
-		font-weight: 700;
-		margin: 0 0 50px 0;
-		font-size: 36px;
-		text-align: start;
-	}
-
 	h2 {
 		margin-top: 50px;
 	}
@@ -96,9 +103,6 @@
 	@media (min-width: 900px) {
 		.list {
 			flex-direction: row;
-		}
-		main > h1 {
-			font-size: 48px;
 		}
 	}
 </style>
