@@ -10,15 +10,12 @@
 	<main>
 		<h1>About</h1>
 		<p>
-			Lorem ipsum odor amet, consectetuer adipiscing elit. 
-			Facilisi sollicitudin potenti blandit, tempor arcu ultricies consectetur. 
-			Cras pulvinar venenatis, ullamcorper tempus ultrices per. 
-			Nec ultrices feugiat senectus cursus nibh nulla tincidunt vel. 
-			Potenti semper enim erat lacinia a posuere penatibus. 
-			Litora tincidunt lectus a potenti taciti ridiculus eget. 
-			Ornare hac integer proin fames suspendisse blandit convallis. 
-			Nascetur placerat elit mauris nullam aliquet adipiscing; viverra iaculis ipsum. 
-			Magnis nam himenaeos quis egestas hac tempus sociosqu imperdiet.
+			Hey, I&apos;m Luis 👋  <br>
+			I&apos;m a software engineer and a Computer Science student at UCF, passionate about building games and cool software experiences.
+			Currently, I&apos;m involved in two research positions—one enhancing chip security at Silicon Assurance, and the other automating biological experiments with Argonne National Laboratory.
+		</p>
+		<p>
+			When I&apos;m not coding, you can find me playing games like Kingdom Hearts, playing board games with my friends, or hanging out with my fellow engineers at Knight Hacks.
 		</p>
 		<h2>Skills</h2>
 		{#each Object.entries(skills) as [section, technologies]}
