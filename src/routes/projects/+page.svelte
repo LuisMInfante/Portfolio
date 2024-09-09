@@ -20,20 +20,24 @@
 						<!-- Technologies: -->
 						<div class="techs">
 							{#each project.technologies as tech}
-							<img
-							src={tech.iconUrl ? tech.iconUrl : `https://skillicons.dev/icons?i=${tech.name}`}
-							class="techIcon"
-							alt={tech.name}
-						  />
+							<a href={tech.url} target ="_blank" rel="noopener noreferrer" class="techWrapper" title={tech.alt}>
+								<img
+								src={tech.iconUrl ? tech.iconUrl : `https://skillicons.dev/icons?i=${tech.name}`}
+								class="techIcon"
+								alt={tech.alt}
+								/>
+							</a>
 							{/each}
 						</div>
 					</div>
 				</div>
 				<p>
-					{project.description}
+					{#each project.description as bullet}
+						<li>{bullet}</li>
+					{/each}
 				</p>
-				<a href={project.url} target="_blank" rel="noreferrer">
-					<div class="button">Project url -></div>
+				<a href={project.url} target="_blank" rel="noopener noreferrer">
+					<div class="button">Project Url</div>
 				</a>
 			</div>
 		{/each}
@@ -120,16 +124,26 @@
 		justify-content: space-between;
 		align-items: center;
 	}
-	.techs > div {
+	/* .techs > div {
 		margin: 0 0 0 10px;
-	}
+	} */
 	.techIcon {
 		height: 36px;
 		margin-right: 10px;
 		border-radius: 8px;
+		transition: transform 0.2s;
+		display: block;
 	}
-	.rounded {
-		border-radius: 8px;
+	.techIcon:hover {
+		transform: scale(1.1);
+	}
+	.techWrapper {
+		position: relative;
+		cursor: pointer;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0;
+		margin: 0;
 	}
 
 	.button {

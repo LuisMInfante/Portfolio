@@ -29,7 +29,7 @@
 					{work.description}
 				</p>
 				<a href={work.url} target="_blank" rel="noreferrer">
-					<div class="button">work url -></div>
+					<div class="button">Work Url</div>
 				</a>
 			</div>
 		{/each}
