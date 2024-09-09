@@ -20,7 +20,8 @@ const projects = [
 			{ name: 'ts', iconUrl: null, alt: 'TypeScript', url: 'https://www.typescriptlang.org/'},
 			{ name: 'react', iconUrl: null, alt: 'React', url: 'https://react.dev/'},
 			{ name: 'nextjs', iconUrl: null, alt: 'Next.js', url: 'https://nextjs.org/'},
-			{ name: 'tailwind', iconUrl: null, alt: 'Tailwind CSS', url: 'https://tailwindcss.com/'}
+			{ name: 'tailwind', iconUrl: null, alt: 'Tailwind CSS', url: 'https://tailwindcss.com/'},
+			{ name: 'figma', iconUrl: null, alt: 'Figma', url: 'https://www.figma.com/'},
 		],
 		description: [
 			'Developed the front-end of a Next.js application with over 200 users',

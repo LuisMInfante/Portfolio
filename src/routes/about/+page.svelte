@@ -29,9 +29,15 @@
 					</h4>
 					<div class="list">
 						{#each technologies as technology}
-							<div>
-								{technology}
-							</div>
+							<!-- Handle Objects -->
+							{#if typeof technology === 'object' && technology !== null}
+								<a href={technology.url} target="_blank" rel="noopener noreferrer" class="skillWrapper" title={technology.alt}>
+									<img src={technology.iconUrl ? technology.iconUrl : `https://skillicons.dev/icons?i=${technology.name}`} alt={technology.alt} class="skillIcon" />
+								</a>
+							<!-- Handle Strings -->
+							{:else}
+								<div class="skillString">{technology}</div>
+							{/if}
 						{/each}
 					</div>
 				</li>
@@ -41,6 +47,23 @@
 </div>
 
 <style>
+	.skillWrapper {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+	.skillIcon {
+		height: 36px;
+		border-radius: 8px;
+		transition: transform 0.2s;
+	}
+	.skillIcon:hover {
+		transform: scale(1.1);
+	}
+	.skillString {
+		margin-bottom: 5px;
+	}
+
 	.container {
 		max-width: 900px;
 		padding: 0;
@@ -69,8 +92,8 @@
 
 	.list {
 		display: flex;
-		flex-direction: column;
-		gap: 30px;
+		flex-direction: wrap;
+		gap: 10px;
 	}
 
 	@media (min-width: 900px) {
