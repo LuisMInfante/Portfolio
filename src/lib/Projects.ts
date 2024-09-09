@@ -42,7 +42,36 @@ const projects = [
 			'Implemented movement mechanics inspired by Super Mario 64, including the iconic triple jump'
 		],
 		url: 'https://github.com/LuisMInfante/3DPlatformer'
-	}
+	},
+	// {
+	// 	title: '3rd Person Shooter',
+	// 	technologies: [
+	// 		{ name: 'cpp', iconUrl: null, alt: 'C++' , url: 'https://isocpp.org/'},
+	// 		{ name: 'unreal', iconUrl: null, alt: 'Unreal Engine', url: 'https://www.unrealengine.com/'},
+	// 	],
+	// 	description: [
+	// 		'Developed a 3rd person shooter where players must defeat all enemies in order to win',
+	// 		'Implemented enemy AI class to target and chase player using Unreal Engine\'s behavior trees and blackboard',
+	// 		'Implemented particle effects using On-Hit events during combat'
+	// 	],
+	// 	url: 'https://github.com/LuisMInfante/3rdPersonShooter'
+	// },
+	{
+		title: 'Wall Climber',
+		technologies: [
+			{ name: 'py', iconUrl: null, alt: 'Python' , url: 'https://www.python.org/'},
+			{ name: 'cpp', iconUrl: null, alt: 'C++' , url: 'https://isocpp.org/'},
+			{ name: 'opencv', iconUrl: null, alt: 'OpenCV', url: 'https://opencv.org/'},
+			{ name: 'arduino', iconUrl: null, alt: 'Arduino', url: 'https://www.arduino.cc/'},
+			{ name: 'raspberrypi', iconUrl: null, alt: 'RaspberryPi', url: 'https://www.raspberrypi.com/'},
+		],
+		description: [
+			'Developed a robot that navigates autonomously through a re-configurable vertical maze with the aid of a camera',
+			'Implemented serial communication over Bluetooth, reducing robot weight and size by 83%',
+			'Utilized OpenCV and Dijkstra\'s algorithm for optimal pathfinding'
+		],
+		url: 'https://github.com/RoboticsClubatUCF/Wall-Climber'
+	},
 ];
 
 export default projects;
