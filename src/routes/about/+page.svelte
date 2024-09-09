@@ -45,7 +45,7 @@
 	.greeting {
 		font-size: 36px;  
 		font-weight: 700;
-		margin: 25px 0 25px 0;
+		margin: 30px 0 25px 0;
 		text-align: start;
 		color: #fff;
 	}

@@ -7,27 +7,35 @@
 </svelte:head>
 
 <div class="workContainer">
-	<div class="works">
+	<div class="workEntries">
 		<h1>My Work</h1>
-		<!-- <p class="note"></p> -->
 		{#each works as work}
 			<div class="work">
 				<div class="header">
-					<h2>
-						{work.title}
-					</h2>
+					<h2>{work.title}</h2>
+					<div class="roleAndTime">
+						<h3>{work.role}</h3>
+						<span class="timeRange">({work.timeRange})</span>
+					</div>
 					<div class="techsContainer">
-						Technologies:
 						<div class="techs">
 							{#each work.technologies as tech}
-								<div>{tech}</div>
+								<a href={tech.url} target="_blank" rel="noopener noreferrer" class="techWrapper" title={tech.alt}>
+									<img
+										src={tech.iconUrl ? tech.iconUrl : `https://skillicons.dev/icons?i=${tech.name}`}
+										alt={tech.alt}
+										class="techIcon"
+									/>
+								</a>
 							{/each}
 						</div>
 					</div>
 				</div>
-				<p>
-					{work.description}
-				</p>
+				<ul>
+					{#each work.description as bullet}
+						<li>{bullet}</li>
+					{/each}
+				</ul>
 				<a href={work.url} target="_blank" rel="noreferrer">
 					<div class="button">Work Url</div>
 				</a>
@@ -43,37 +51,47 @@
 		display: flex;
 		justify-content: center;
 		box-sizing: border-box;
-		text-align: center;
 		padding: 1em;
-		margin: 0 auto;
-		text-align: center;
+		margin: -20px auto 0 auto;
 	}
 
-	.note {
-		opacity: 0.5;
-		margin: 0;
-		max-width: 900px;
-		text-align: left;
-	}
-
-	a {
-		text-decoration: none;
-	}
-
-	.workContainer .works {
+	.workEntries {
+		width: 100%;
+		margin: 50px auto;
 		display: grid;
+		grid-gap: 40px; 
 		grid-template-columns: 1fr;
-		grid-gap: 40px;
-		margin-top: 30px;
+		margin-bottom: 10px;
 	}
 
 	h1 {
 		font-weight: 700;
 		text-align: start;
+		font-size: 36px;
+		margin: 0 0 50px 0; 
 	}
 
 	h2 {
+		font-weight: 600;
+		font-size: 24px;
+		margin: 0;
+	}
+
+	.roleAndTime {
 		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	h3 {
+		font-weight: 400;
+		color: #b0b0b0;
+		margin: 0;
+	}
+
+	.timeRange {
+		color: #b0b0b0;
+		font-size: 14px;
 		margin: 0;
 	}
 
@@ -86,23 +104,15 @@
 		background: #111;
 		padding: 2rem;
 		width: 100%;
-		border-radius: 5px;
-		transition: transform 0.2s ease-in-out;
 		border-radius: 25px;
+		transition: transform 0.2s ease-in-out;
 	}
 
-	.work p {
-		font-weight: 100;
+	.work ul {
+		margin: 10px 0;
+		list-style: disc;
+		padding-left: 20px;
 		color: #708090;
-	}
-
-	.works {
-		width: 100%;
-		margin: 50px auto;
-		display: grid;
-		grid-gap: 1rem;
-		grid-template-columns: 1fr;
-		margin-bottom: 10px;
 	}
 
 	.techsContainer {
@@ -116,8 +126,16 @@
 		justify-content: space-between;
 		align-items: center;
 	}
-	.techs > div {
-		margin: 0 0 0 10px;
+
+	.techIcon {
+		height: 36px;
+		margin-right: 10px;
+		border-radius: 8px;
+		transition: transform 0.2s;
+	}
+
+	.techIcon:hover {
+		transform: scale(1.1);
 	}
 
 	.button {
@@ -127,24 +145,25 @@
 		color: white;
 		border: 2px solid white;
 		padding: 10px;
+		margin-top: 10px;
 	}
 
 	@media (min-width: 900px) {
 		.workContainer {
 			padding: 0;
 		}
-		.works > h1 {
+		.workEntries > h1 {
 			font-weight: 700;
-    		margin: 0 0 0 0;
-    		font-size: 36px;
-    		text-align: start;
+			margin: 0 0 0 0;
+			font-size: 36px;
+			text-align: start;
 		}
 
-		.works {
+		.workEntries {
 			grid-template-columns: 1fr;
 		}
 
-		.works .work {
+		.work {
 			min-height: 200px;
 		}
 		.button {
@@ -153,7 +172,7 @@
 	}
 
 	@media (min-width: 600px) {
-		.works {
+		.workEntries {
 			grid-template-columns: 1fr;
 		}
 	}
