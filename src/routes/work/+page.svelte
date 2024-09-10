@@ -38,7 +38,7 @@
 					{/each}
 				</ul>
 				<a href={work.url} target="_blank" rel="noreferrer">
-					<div class="button">Work Url</div>
+					<div class="button">Work URL</div>
 				</a>
 			</div>
 		{/each}

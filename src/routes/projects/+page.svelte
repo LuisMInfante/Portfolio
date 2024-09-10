@@ -38,7 +38,7 @@
 					{/each}
 				</p>
 				<a href={project.url} target="_blank" rel="noopener noreferrer">
-					<div class="button">Project Url</div>
+					<div class="button">Project URL</div>
 				</a>
 			</div>
 		{/each}

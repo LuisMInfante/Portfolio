@@ -12,7 +12,7 @@ const works = [
 		'Analyzed RTL and flattened netlist data to detect security flaws.',
 		'Created a simulation tool for stuck at fault analysis, providing key insights into chip vulnerabilities.'
 	  ],
-	  url: 'https://github.com/' 
+	  url: 'https://siliconassurance.com/' 
 	},
 	{
 	  title: 'Department of Energy RENEW Program',
@@ -28,7 +28,7 @@ const works = [
 		'Developed and simulated robotic behaviors using Unity and ROS2, optimizing laboratory workflows and accuracy.',
 		'Integrated software solutions with laboratory operations, streamlining experimental procedures.'
 	  ],
-	  url: 'https://github.com/' 
+	  url: 'https://science.osti.gov/Initiatives/RENEW' 
 	},
 	{
 	  title: 'University of Central Florida',
@@ -42,7 +42,7 @@ const works = [
 		'Conducted office hours and led lab sessions, resulting in grade improvements of 60% on average.',
 		'Developed instructional materials, such as study guides and practice problems, to support student learning.'
 	  ],
-	  url: 'https://github.com/'
+	  url: 'https://www.ucf.edu/'
 	}
   ];
   
