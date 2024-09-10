@@ -22,9 +22,10 @@
 							{#each project.technologies as tech}
 							<a href={tech.url} target ="_blank" rel="noopener noreferrer" class="techWrapper" title={tech.alt}>
 								<img
-								src={tech.iconUrl ? tech.iconUrl : `https://skillicons.dev/icons?i=${tech.name}`}
-								class="techIcon"
-								alt={tech.alt}
+									loading="lazy"
+									src={tech.iconUrl ? tech.iconUrl : `https://skillicons.dev/icons?i=${tech.name}`}
+									class="techIcon"
+									alt={tech.alt}
 								/>
 							</a>
 							{/each}

@@ -27,7 +27,12 @@
 							<!-- Handle Objects -->
 							{#if typeof technology === 'object' && technology !== null}
 								<a href={technology.url} target="_blank" rel="noopener noreferrer" class="skillWrapper" title={technology.alt}>
-									<img src={technology.iconUrl ? technology.iconUrl : `https://skillicons.dev/icons?i=${technology.name}`} alt={technology.alt} class="skillIcon" />
+									<img 
+										loading="lazy"
+										src={technology.iconUrl ? technology.iconUrl : `https://skillicons.dev/icons?i=${technology.name}`} 
+										alt={technology.alt} 
+										class="skillIcon" 
+									/>
 								</a>
 							<!-- Handle Strings -->
 							{:else}

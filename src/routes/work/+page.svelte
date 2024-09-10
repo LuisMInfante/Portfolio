@@ -22,6 +22,7 @@
 							{#each work.technologies as tech}
 								<a href={tech.url} target="_blank" rel="noopener noreferrer" class="techWrapper" title={tech.alt}>
 									<img
+										loading="lazy"
 										src={tech.iconUrl ? tech.iconUrl : `https://skillicons.dev/icons?i=${tech.name}`}
 										alt={tech.alt}
 										class="techIcon"
