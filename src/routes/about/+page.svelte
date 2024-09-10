@@ -47,67 +47,77 @@
 </div>
 
 <style>
-	.greeting {
-		font-size: 36px;  
-		font-weight: 700;
-		margin: 30px 0 25px 0;
-		text-align: start;
-		color: #fff;
-	}
+.greeting {
+	font-size: 36px;  
+	font-weight: 700;
+	margin: 30px 0 25px 0;
+	text-align: start;
+	color: #fff;
+}
 
-	.description {
-		font-size: 18px;
-		font-weight: 400;
-		line-height: 1.6;
-		color: #fff;
-		margin-bottom: 20px;
-	}
+.description {
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #fff;
+	margin-bottom: 20px;
+}
 
-	.skillWrapper {
-		display: flex;
-		align-items: center;
-		text-decoration: none;
-	}
-	.skillIcon {
-		height: 36px;
-		border-radius: 8px;
-		transition: transform 0.2s;
-	}
-	.skillIcon:hover {
-		transform: scale(1.1);
-	}
-	.skillString {
-		margin-bottom: 5px;
-	}
+.skillWrapper {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+}
 
-	.container {
-		max-width: 900px;
-		padding: 0;
-		display: flex;
-		justify-content: center;
-	}
+.skillIcon {
+	height: 36px;
+	border-radius: 8px;
+	transition: transform 0.2s;
+}
 
-	main {
-		max-width: 100%;
-		min-height: 500px;
-		text-align: left;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
+.skillIcon:hover {
+	transform: scale(1.1);
+}
 
-	h2 {
-		margin-top: 50px;
-	}
+.skillString {
+	margin-bottom: 5px;
+}
 
+.container {
+	max-width: 900px;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+}
+
+main {
+	max-width: 100%;
+	min-height: 500px;
+	text-align: left;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 0 20px;
+}
+
+h2 {
+	margin-top: 50px;
+}
+
+.list {
+	display: flex;
+	flex-wrap: wrap; 
+	gap: 10px;
+}
+
+@media (min-width: 900px) {
 	.list {
-		display: flex;
-		flex-direction: wrap;
-		gap: 10px;
+		flex-direction: row;
 	}
+}
 
-	@media (min-width: 900px) {
-		.list {
-			flex-direction: row;
-		}
+@media (max-width: 600px) {
+	main {
+		padding: 0 15px;
 	}
+}
 </style>
