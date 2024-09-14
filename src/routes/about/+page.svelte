@@ -12,7 +12,7 @@
 			Hey, I&apos;m Luis 👋  
 		</p>
 		<p class="description">
-			I&apos;m a software engineer and a Computer Science student at UCF, passionate about building games and cool software experiences. Currently, I&apos;m involved in two research positions—one enhancing chip security at Silicon Assurance, and the other automating biological experiments with Argonne National Laboratory.
+			I&apos;m a Software Developer and a Computer Science student at UCF, passionate about building games and cool software experiences. Currently, I&apos;m involved in two research positions—one enhancing chip security at Silicon Assurance, and the other automating biological experiments with Argonne National Laboratory.
 		</p>
 		<p class="description">
 			When I&apos;m not coding, you can find me playing games like Kingdom Hearts, playing board games with my friends, or hanging out with my fellow engineers at Knight Hacks.
