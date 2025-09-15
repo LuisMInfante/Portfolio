@@ -20,10 +20,18 @@
 					<div class="techsContainer">
 						<div class="techs">
 							{#each work.technologies as tech}
-								<a href={tech.url} target="_blank" rel="noopener noreferrer" class="techWrapper" title={tech.alt}>
+								<a
+									href={tech.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="techWrapper"
+									title={tech.alt}
+								>
 									<img
 										loading="lazy"
-										src={tech.iconUrl ? tech.iconUrl : `https://skillicons.dev/icons?i=${tech.name}`}
+										src={tech.iconUrl
+											? tech.iconUrl
+											: `https://skillicons.dev/icons?i=${tech.name}`}
 										alt={tech.alt}
 										class="techIcon"
 									/>
@@ -60,7 +68,7 @@
 		width: 100%;
 		margin: 50px auto;
 		display: grid;
-		grid-gap: 40px; 
+		grid-gap: 40px;
 		grid-template-columns: 1fr;
 		margin-bottom: 10px;
 	}
@@ -69,7 +77,7 @@
 		font-weight: 700;
 		text-align: start;
 		font-size: 36px;
-		margin: 0 0 50px 0; 
+		margin: 0 0 50px 0;
 	}
 
 	h2 {

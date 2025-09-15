@@ -8,14 +8,17 @@
 
 <div class="container">
 	<main>
-		<p class="greeting">
-			Hey, I&apos;m Luis 👋  
+		<p class="greeting">Hey, I&apos;m Luis 👋</p>
+		<p class="description">
+			I&apos;m a Software Developer and a Computer Science student at UCF, passionate about building
+			games and cool software experiences. Recently, I completed internships at Medtronic and the
+			Institute for Simulation & Training - METIL, where I worked on full-stack testing frameworks
+			and VR simulations. Currently, I&apos;m working with the SHPE Colorado Professional chapter,
+			working on improving their website and increasing member engagement.
 		</p>
 		<p class="description">
-			I&apos;m a Software Developer and a Computer Science student at UCF, passionate about building games and cool software experiences. Currently, I&apos;m involved in two research positions—one enhancing chip security at Silicon Assurance, and the other automating biological experiments with Argonne National Laboratory.
-		</p>
-		<p class="description">
-			When I&apos;m not coding, you can find me playing games like Kingdom Hearts, playing board games with my friends, or hanging out with my fellow engineers at Knight Hacks.
+			When I&apos;m not coding, you can find me playing games like Kingdom Hearts, watching anime or
+			playing board games with my friends.
 		</p>
 		<h2>Skills</h2>
 		{#each Object.entries(skills) as [section, technologies]}
@@ -26,15 +29,23 @@
 						{#each technologies as technology}
 							<!-- Handle Objects -->
 							{#if typeof technology === 'object' && technology !== null}
-								<a href={technology.url} target="_blank" rel="noopener noreferrer" class="skillWrapper" title={technology.alt}>
-									<img 
+								<a
+									href={technology.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="skillWrapper"
+									title={technology.alt}
+								>
+									<img
 										loading="lazy"
-										src={technology.iconUrl ? technology.iconUrl : `https://skillicons.dev/icons?i=${technology.name}`} 
-										alt={technology.alt} 
-										class="skillIcon" 
+										src={technology.iconUrl
+											? technology.iconUrl
+											: `https://skillicons.dev/icons?i=${technology.name}`}
+										alt={technology.alt}
+										class="skillIcon"
 									/>
 								</a>
-							<!-- Handle Strings -->
+								<!-- Handle Strings -->
 							{:else}
 								<div class="skillString">{technology}</div>
 							{/if}
@@ -47,77 +58,77 @@
 </div>
 
 <style>
-.greeting {
-	font-size: 36px;  
-	font-weight: 700;
-	margin: 30px 0 25px 0;
-	text-align: start;
-	color: #fff;
-}
-
-.description {
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 1.6;
-	color: #fff;
-	margin-bottom: 20px;
-}
-
-.skillWrapper {
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-}
-
-.skillIcon {
-	height: 36px;
-	border-radius: 8px;
-	transition: transform 0.2s;
-}
-
-.skillIcon:hover {
-	transform: scale(1.1);
-}
-
-.skillString {
-	margin-bottom: 5px;
-}
-
-.container {
-	max-width: 900px;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-}
-
-main {
-	max-width: 100%;
-	min-height: 500px;
-	text-align: left;
-	margin: 0 auto;
-	box-sizing: border-box;
-	padding: 0 20px;
-}
-
-h2 {
-	margin-top: 50px;
-}
-
-.list {
-	display: flex;
-	flex-wrap: wrap; 
-	gap: 10px;
-}
-
-@media (min-width: 900px) {
-	.list {
-		flex-direction: row;
+	.greeting {
+		font-size: 36px;
+		font-weight: 700;
+		margin: 30px 0 25px 0;
+		text-align: start;
+		color: #fff;
 	}
-}
 
-@media (max-width: 600px) {
+	.description {
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 1.6;
+		color: #fff;
+		margin-bottom: 20px;
+	}
+
+	.skillWrapper {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+	}
+
+	.skillIcon {
+		height: 36px;
+		border-radius: 8px;
+		transition: transform 0.2s;
+	}
+
+	.skillIcon:hover {
+		transform: scale(1.1);
+	}
+
+	.skillString {
+		margin-bottom: 5px;
+	}
+
+	.container {
+		max-width: 900px;
+		padding: 0;
+		display: flex;
+		justify-content: center;
+	}
+
 	main {
-		padding: 0 15px;
+		max-width: 100%;
+		min-height: 500px;
+		text-align: left;
+		margin: 0 auto;
+		box-sizing: border-box;
+		padding: 0 20px;
 	}
-}
+
+	h2 {
+		margin-top: 50px;
+	}
+
+	.list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	@media (min-width: 900px) {
+		.list {
+			flex-direction: row;
+		}
+	}
+
+	@media (max-width: 600px) {
+		main {
+			padding: 0 15px;
+		}
+	}
 </style>

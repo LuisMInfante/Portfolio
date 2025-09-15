@@ -61,7 +61,7 @@
 
 {#if showCookieModal && cookieEnabled}
 	<div class="cookieContainer">
-		<p>🍪 This website uses Cookies. </p>
+		<p>🍪 This website uses Cookies.</p>
 		<div
 			role="button"
 			tabindex="0"

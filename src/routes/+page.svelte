@@ -2,7 +2,7 @@
 	import FaLinkedin from 'svelte-icons/fa/FaLinkedin.svelte';
 	import FaGithub from 'svelte-icons/fa/FaGithub.svelte';
 	import FaEnvelope from 'svelte-icons/fa/FaEnvelope.svelte';
-	import FaItchIo from 'svelte-icons/fa/FaItchIo.svelte'
+	import FaItchIo from 'svelte-icons/fa/FaItchIo.svelte';
 	import { modalOpened } from '$lib/store';
 </script>
 
@@ -10,7 +10,9 @@
 	<title>Luis Infante - Main page</title>
 </svelte:head>
 <main>
-	<h1>Hey, I'm Luis 👋 <br /> I'm a Software Developer and Undergraduate Computer Science Student at UCF </h1>
+	<h1>
+		Hey, I'm Luis 👋 <br /> I'm a Software Developer and Undergraduate Computer Science Student at UCF
+	</h1>
 	<div class="icons">
 		<div
 			role="button"
@@ -47,14 +49,9 @@
 				<FaLinkedin />
 			</div>
 		</a>
-		<a
-			href=""
-			aria-label="Itch.io"
-			target="_blank"
-			rel="noopener noreferrer"
-		>
+		<a href="" aria-label="Itch.io" target="_blank" rel="noopener noreferrer">
 			<!-- <div class="icon"> -->
-				<!-- <FaItchIo /> -->
+			<!-- <FaItchIo /> -->
 			<!-- </div> -->
 		</a>
 	</div>

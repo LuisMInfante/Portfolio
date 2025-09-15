@@ -20,14 +20,22 @@
 						<!-- Technologies: -->
 						<div class="techs">
 							{#each project.technologies as tech}
-							<a href={tech.url} target ="_blank" rel="noopener noreferrer" class="techWrapper" title={tech.alt}>
-								<img
-									loading="lazy"
-									src={tech.iconUrl ? tech.iconUrl : `https://skillicons.dev/icons?i=${tech.name}`}
-									class="techIcon"
-									alt={tech.alt}
-								/>
-							</a>
+								<a
+									href={tech.url}
+									target="_blank"
+									rel="noopener noreferrer"
+									class="techWrapper"
+									title={tech.alt}
+								>
+									<img
+										loading="lazy"
+										src={tech.iconUrl
+											? tech.iconUrl
+											: `https://skillicons.dev/icons?i=${tech.name}`}
+										class="techIcon"
+										alt={tech.alt}
+									/>
+								</a>
 							{/each}
 						</div>
 					</div>
@@ -162,9 +170,9 @@
 		}
 		.projects > h1 {
 			font-weight: 700;
-    		margin: 0 0 0 0;
-    		font-size: 36px;
-    		text-align: start;
+			margin: 0 0 0 0;
+			font-size: 36px;
+			text-align: start;
 		}
 
 		.projects {
